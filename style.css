@@ -1,88 +1,4 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#120027,#240046,#3c096c);
-color:#fff;
-}
-
-.container{
-width:95%;
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:rgba(255,255,255,.08);
-border-radius:16px;
-backdrop-filter:blur(12px);
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#FFD700;
-}
-
-nav{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFD700;
-}
-
-.hero{
-text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-font-size:55px;
-color:#FFD700;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:25px;
-color:#ddd;
-}
-
-.buttons button{
-padding:14px 28px;
-margin:8px;
-border:none;
-border-radius:10px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-background:#FFD700;
-color:#000;
-transition:.3s;
-}
-
-.buttons button:hover{
-transform:scale(1.05);
-}.games{
+.games{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -101,7 +17,7 @@ transition:.3s;
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(255,215,0,.3);
+box-shadow:0 10px 30px rgba(255,215,0,.35);
 }
 
 .card h2{
@@ -120,16 +36,13 @@ line-height:1.6;
 width:100%;
 padding:14px;
 border:none;
-border-radius:12px;
-background:linear-gradient(90deg,#FFD700,#FFB300);
+border-radius:10px;
+background:#FFD700;
 color:#000;
 font-weight:bold;
 cursor:pointer;
 }
-
-.card button:hover{
-background:#fff176;
-}.bonus{
+.bonus{
 margin:50px 0;
 padding:30px;
 text-align:center;
@@ -144,6 +57,11 @@ color:#FFD700;
 margin-bottom:10px;
 }
 
+.bonus p{
+color:#fff;
+font-size:18px;
+}
+
 .wallet{
 display:flex;
 gap:20px;
@@ -156,121 +74,7 @@ flex:1;
 padding:16px;
 border:none;
 border-radius:12px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.deposit{
-background:#00c853;
-color:#fff;
-}
-
-.withdraw{
-background:#ff1744;
-color:#fff;
-}
-
-.login-box{
-margin-top:50px;
-padding:30px;
-background:rgba(255,255,255,.08);
-border-radius:20px;
-backdrop-filter:blur(15px);
-}
-
-.login-box h2{
-text-align:center;
-color:#FFD700;
-margin-bottom:20px;
-}
-
-.login-box input{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:none;
-border-radius:10px;
-}
-
-.login-box button{
-width:100%;
-padding:15px;
-background:#FFD700;
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-footer{
-margin-top:50px;
-padding:30px;
-text-align:center;
-background:rgba(255,255,255,.08);
-border-radius:20px;
-}button{
-transition:.3s;
-box-shadow:0 5px 15px rgba(255,215,0,.3);
-}
-
-button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(255,215,0,.5);
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#120027;
-}
-
-::-webkit-scrollbar-thumb{
-background:#FFD700;
-border-radius:20px;
-}
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:15px;
-text-align:center;
-}
-
-nav{
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-.games{
-grid-template-columns:1fr;
-}
-
-.wallet{
-flex-direction:column;
-}
-
-.buttons button{
-width:100%;
-}
-
-.logo{
-font-size:28px;
-}
-
+font
+.card button:hover{
+background:#FFC107;
 }

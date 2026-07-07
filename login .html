@@ -4,122 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - PAKEEZA GAME</title>
-
 <link rel="stylesheet" href="style.css">
-
-<style>
-.login-page{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#0d1027,#1d2fff,#111);
-}
-
-.login-box{
-    width:380px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(15px);
-    padding:35px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,.15);
-    text-align:center;
-    color:#fff;
-}
-
-.login-box h1{
-    color:#ffd700;
-    margin-bottom:10px;
-}
-
-.login-box p{
-    color:#ccc;
-    margin-bottom:25px;
-}
-
-.input-box{
-    margin-bottom:18px;
-}
-
-.input-box input{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    font-size:16px;.login-btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#FFD700;
-    color:#000;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.login-btn:hover{
-    transform:scale(1.03);
-}
-
-.register-link{
-    margin-top:20px;
-    display:block;
-    color:#FFD700;
-    text-decoration:none;
-}
-</style>
-
 </head>
 
 <body>
 
 <div class="login-page">
-
 <div class="login-box">
 
-<h1>PAKEEZA GAME</h1>
+<h1>🎮 PAKEEZA GAME</h1>
+<p>Welcome Back!</p>
 
-<p>Login to your account</p>
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password"><button id="loginBtn" class="login-btn">
+🔐 Login Now
+</button>
 
-<div class="input-box">
-<input type="text" placeholder="Username">
+<div class="remember-box">
+<label>
+<input type="checkbox">
+Remember Me
+</label>
+
+<a href="#">Forgot Password?</a>
 </div>
 
-<div class="input-box">
-<input type="password" placeholder="Password">
+<p class="bottom-text">
+Don't have an account?
+<a href="register.html">Create Account</a>
+</p><div class="social-login">
+
+<button class="google-btn">
+🟢 Continue with Google
+</button>
+
+<button class="facebook-btn">
+🔵 Continue with Facebook
+</button>
+
 </div>
 
-<button class="login-btn">Login</button>
-
-<a class="register-link" href="register.html">
-Create New Account
-</a></div>
-
+</div>
 </div>
 
-<script>
-const loginBtn = document.querySelector(".login-btn");
-
-loginBtn.addEventListener("click", function(){
-
-    const username = document.querySelector('input[type="text"]').value.trim();
-    const password = document.querySelector('input[type="password"]').value.trim();
-
-    if(username === "" || password === ""){
-        alert("Please enter Username and Password.");
-        return;
-    }
-
-    alert("Login successful! (Demo)");
-
-    window.location.href = "index.html";
-
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
-    outline:none;
-}

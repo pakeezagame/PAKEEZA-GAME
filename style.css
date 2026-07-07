@@ -1,116 +1,141 @@
-// Login Button
-document.getElementById("loginBtn").addEventListener("click", function () {
-    document.querySelector(".login-box").scrollIntoView({
-        behavior: "smooth"
-    });
-});
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-// Register Button
-document.getElementById("signupBtn").addEventListener("click", function () {
-    alert("Registration feature coming soon.");
-});
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#120027,#240046,#3c096c);
+color:#fff;
+}
 
-// Login Form
-document.querySelector(".login-box button").addEventListener("click", function () {
+.container{
+width:95%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
 
-    const username = document.querySelector('input[type="text"]').value.trim();
-    const password = document.querySelector('input[type="password"]').value.trim();
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:rgba(255,255,255,.08);
+border-radius:16px;
+backdrop-filter:blur(12px);
+}
 
-    if (username === "" || password === "") {
-        alert("Please enter Username and Password.");
-        return;
-    }
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#FFD700;
+}
 
-    alert("Welcome " + username + "!");
-});
+nav{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
 
-// Deposit Button
-document.querySelector(".deposit").addEventListener("click", function () {
-    alert("Deposit page coming soon.");
-});
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
 
-// Withdraw Button
-document.querySelector(".withdraw").addEventListener("click", function () {
-    alert("Withdraw page coming soon.");
-});
+nav a:hover{
+color:#FFD700;
+}
 
-// Play Now Buttons
-document.querySelectorAll(".card button").forEach(function(button){
-    button.addEventListener("click", function(){
-        const game = this.parentElement.querySelector("h2").innerText;
-        alert("Opening " + game + "...");
-    });
-});/* ===== PREMIUM GAME CARDS ===== */
+.hero{
+text-align:center;
+padding:80px 20px;
+}
 
-.games{
+.hero h1{
+font-size:55px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+color:#ddd;
+}
+
+.buttons button{
+padding:14px 28px;
+margin:8px;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:#FFD700;
+color:#000;
+transition:.3s;
+}
+
+.buttons button:hover{
+transform:scale(1.05);
+}.games{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 margin:50px 0;
 }
 
 .card{
 background:rgba(255,255,255,.08);
-backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,.12);
 border-radius:20px;
 padding:25px;
 text-align:center;
-transition:.35s;
-box-shadow:0 10px 30px rgba(0,0,0,.30);
-overflow:hidden;
-position:relative;
-}
-
-.card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:5px;
-background:linear-gradient(90deg,#FFD700,#FF9800,#FFD700);
+backdrop-filter:blur(15px);
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 15px 35px rgba(255,215,0,.35);
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(255,215,0,.3);
 }
 
 .card h2{
-font-size:28px;
 color:#FFD700;
-margin:18px 0 10px;
+margin-bottom:15px;
+font-size:28px;
 }
 
 .card p{
 color:#ddd;
-font-size:16px;
-line-height:1.6;
 margin-bottom:20px;
+line-height:1.6;
 }
 
 .card button{
 width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
 background:linear-gradient(90deg,#FFD700,#FFB300);
 color:#000;
 font-weight:bold;
-border-radius:12px;
-padding:14px;
+cursor:pointer;
 }
 
 .card button:hover{
-background:linear-gradient(90deg,#FFF176,#FFD700);
-}
-
-.bonus{
-margin-top:40px;
+background:#fff176;
+}.bonus{
+margin:50px 0;
 padding:30px;
 text-align:center;
-border-radius:20px;
 background:linear-gradient(135deg,#6a00f4,#9d4edd);
+border-radius:20px;
 border:2px solid #FFD700;
-box-shadow:0 10px 30px rgba(157,78,221,.4);
 }
 
 .bonus h2{
@@ -118,11 +143,6 @@ font-size:34px;
 color:#FFD700;
 margin-bottom:10px;
 }
-
-.bonus p{
-font-size:18px;
-color:#fff;
-}/* ===== WALLET ===== */
 
 .wallet{
 display:flex;
@@ -133,132 +153,88 @@ margin:40px 0;
 .deposit,
 .withdraw{
 flex:1;
-padding:18px;
-font-size:20px;
-font-weight:bold;
+padding:16px;
 border:none;
-border-radius:15px;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
 cursor:pointer;
-transition:.3s;
 }
 
 .deposit{
-background:linear-gradient(90deg,#00c853,#00e676);
+background:#00c853;
 color:#fff;
 }
 
 .withdraw{
-background:linear-gradient(90deg,#ff1744,#ff5252);
+background:#ff1744;
 color:#fff;
 }
 
-.deposit:hover,
-.withdraw:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-}
-
-/* ===== LOGIN BOX ===== */
-
 .login-box{
 margin-top:50px;
-padding:35px;
-border-radius:20px;
+padding:30px;
 background:rgba(255,255,255,.08);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.12);
-box-shadow:0 12px 35px rgba(0,0,0,.30);
+border-radius:20px;
+backdrop-filter:blur(15px);
 }
 
 .login-box h2{
 text-align:center;
 color:#FFD700;
 margin-bottom:20px;
-font-size:32px;
 }
 
 .login-box input{
 width:100%;
-padding:16px;
-margin-bottom:18px;
+padding:15px;
+margin-bottom:15px;
 border:none;
-border-radius:12px;
-font-size:17px;
-background:rgba(255,255,255,.15);
-color:#fff;
-}
-
-.login-box input::placeholder{
-color:#ddd;
+border-radius:10px;
 }
 
 .login-box button{
 width:100%;
-background:linear-gradient(90deg,#FFD700,#FFB300);
+padding:15px;
+background:#FFD700;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
-
 footer{
-margin-top:60px;
-padding:35px;
+margin-top:50px;
+padding:30px;
 text-align:center;
 background:rgba(255,255,255,.08);
 border-radius:20px;
-border:1px solid rgba(255,255,255,.10);
+}button{
+transition:.3s;
+box-shadow:0 5px 15px rgba(255,215,0,.3);
 }
 
-.footer-content h3{
-color:#FFD700;
-font-size:28px;
-margin-bottom:12px;
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(255,215,0,.5);
 }
 
-.footer-content p{
-margin:10px 0;
-color:#ddd;
-}/* ===== PREMIUM ANIMATIONS ===== */
-
-@keyframes fadeUp{
-0%{
-opacity:0;
-transform:translateY(40px);
+html{
+scroll-behavior:smooth;
 }
-100%{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.hero,
-.card,
-.bonus,
-.wallet,
-.login-box,
-footer{
-animation:fadeUp .8s ease;
-}
-
-/* ===== SCROLLBAR ===== */
 
 ::-webkit-scrollbar{
 width:10px;
 }
 
 ::-webkit-scrollbar-track{
-background:#14002e;
+background:#120027;
 }
 
 ::-webkit-scrollbar-thumb{
 background:#FFD700;
 border-radius:20px;
 }
-
-::-webkit-scrollbar-thumb:hover{
-background:#FFC107;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
 
 @media(max-width:768px){
 
@@ -270,10 +246,7 @@ text-align:center;
 
 nav{
 justify-content:center;
-}
-
-.hero{
-padding:50px 15px;
+flex-wrap:wrap;
 }
 
 .hero h1{
@@ -281,7 +254,7 @@ font-size:38px;
 }
 
 .hero p{
-font-size:18px;
+font-size:17px;
 }
 
 .games{
@@ -292,86 +265,12 @@ grid-template-columns:1fr;
 flex-direction:column;
 }
 
+.buttons button{
+width:100%;
+}
+
 .logo{
 font-size:28px;
 }
 
-button{
-width:100%;
-}
-
-.card{
-padding:20px;
-}
-
-}
-/* ===== PREMIUM FINISHING ===== */
-
-.card{
-overflow:hidden;
-}
-
-.card::after{
-content:"";
-position:absolute;
-top:-80%;
-left:-80%;
-width:220%;
-height:220%;
-background:linear-gradient(
-45deg,
-transparent,
-rgba(255,255,255,.08),
-transparent
-);
-transform:rotate(25deg);
-transition:.8s;
-}
-
-.card:hover::after{
-left:100%;
-}
-
-.hero h1{
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-
-0%{
-text-shadow:0 0 10px #FFD700;
-}
-
-100%{
-text-shadow:0 0 30px #FFD700,
-0 0 60px #FF9800;
-}
-
-}
-
-.logo{
-text-shadow:0 0 15px #FFD700;
-}
-
-button{
-box-shadow:0 5px 20px rgba(255,215,0,.35);
-}
-
-button:hover{
-box-shadow:0 10px 35px rgba(255,215,0,.65);
-}
-
-.card h2{
-text-shadow:0 0 8px rgba(255,215,0,.45);
-}
-
-.login-box,
-.bonus,
-footer,
-header{
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-}
-
-html{
-scroll-behavior:smooth;
 }

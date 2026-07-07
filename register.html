@@ -7,129 +7,45 @@
 
 <link rel="stylesheet" href="style.css">
 
-<style>
-
-.register-page{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#14002e,#240046,#3c096c);
-}
-
-.register-box{
-width:400px;
-padding:35px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-border-radius:20px;
-border:1px solid rgba(255,255,255,.15);
-text-align:center;
-color:#fff;
-}
-
-.register-box h1{
-color:#FFD700;
-margin-bottom:10px;
-}
-
-.register-box p{
-margin-bottom:25px;
-color:#ddd;
-}
-
-.input-box{
-margin-bottom:18px;
-}
-
-.input-box input{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-font-size:16px;
-outline:none;
-}.register-btn{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:#FFD700;
-color:#000;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-.register-btn:hover{
-transform:scale(1.03);
-}
-
-.login-link{
-display:block;
-margin-top:20px;
-text-decoration:none;
-color:#FFD700;
-font-weight:bold;
-}
-
-</style>
-
 </head>
 
 <body>
 
-<div class="register-page">
+<div class="login-page">
+<div class="login-box">
 
-<div class="register-box">
+<h1>🎮 PAKEEZA GAME</h1>
+<p>Create Your Account</p>
 
-<h1>PAKEEZA GAME</h1>
+<input type="text" id="name" placeholder="Full Name">
 
-<p>Create Your New Account</p>
+<input type="email" id="email" placeholder="Email Address">
 
-<div class="input-box">
-<input type="text" placeholder="Username">
+<input type="password" id="password" placeholder="Create Password"><input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+<button id="registerBtn" class="login-btn">
+📝 Create Account
+</button>
+
+<p class="bottom-text">
+Already have an account?
+<a href="login.html">Login</a>
+</p><div class="social-login">
+
+<button class="google-btn">
+🟢 Continue with Google
+</button>
+
+<button class="facebook-btn">
+🔵 Continue with Facebook
+</button>
+
 </div>
 
-<div class="input-box">
-<input type="email" placeholder="Email">
+</div>
 </div>
 
-<div class="input-box">
-<input type="password" placeholder="Password">
-</div>
-
-<button class="register-btn">Create Account</button>
-
-<a href="login.html" class="login-link">
-Already have an account? Login
-</a></div>
-
-</div>
-
-<script>
-
-const registerBtn = document.querySelector(".register-btn");
-
-registerBtn.addEventListener("click", function(){
-
-    const username = document.querySelector('input[type="text"]').value.trim();
-    const email = document.querySelector('input[type="email"]').value.trim();
-    const password = document.querySelector('input[type="password"]').value.trim();
-
-    if(username === "" || email === "" || password === ""){
-        alert("Please fill all fields.");
-        return;
-    }
-
-    alert("Account Created Successfully! (Demo)");
-
-    window.location.href = "login.html";
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
